@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+/* ─── Brand Tokens ──────────────────────────────────────────────────────────
+   Exact palette from Volmer Techniek brand book v1.0
+   ─────────────────────────────────────────────────────────────────────────── */
+@theme {
+  --color-obsidian:  #0A0A0B;   /* primary background */
+  --color-carbon:    #141416;   /* section surfaces, cards */
+  --color-graphite:  #1E1E22;   /* borders, dividers, hover states */
+  --color-gunmetal:  #2A2A2F;   /* intermediate surface */
+  --color-steel-60:  #6B6E76;   /* secondary text */
+  --color-steel-30:  #A9ADB5;   /* tertiary text, metadata */
+  --color-ash:       #E7E6E2;   /* primary text on dark — not pure white */
+  --color-bone:      #F5F3EE;   /* light sections, use sparingly */
+  --color-molten:    #D94A1F;   /* accent — <5% of area */
+  --color-ember:     #7A1F0A;   /* deep accent for fire/glow overlays */
+}
+
+/* Font families reference Next.js-injected CSS variables → must be inline */
+@theme inline {
+  --font-display: var(--font-space-grotesk);
+  --font-sans:    var(--font-inter);
+  --font-mono:    var(--font-jetbrains);
+}
+
+/* ─── Base ──────────────────────────────────────────────────────────────────── */
+@layer base {
+  *, *::before, *::after { box-sizing: border-box; }
+
+  html {
+    scroll-behavior: smooth;
+    background: var(--color-obsidian);
+  }
+
+  body {
+    background-color: var(--color-obsidian);
+    color: var(--color-ash);
+    font-family: var(--font-sans, "Inter", system-ui, sans-serif);
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background-color: var(--color-molten);
+    color: var(--color-obsidian);
+  }
+
+  a { color: inherit; text-decoration: none; }
+  img { display: block; max-width: 100%; }
+  ul, ol { list-style: none; margin: 0; padding: 0; }
+}
+
+/* ─── Layout Utilities ──────────────────────────────────────────────────────── */
+@layer utilities {
+  /* Max 1440px container with 80px gutters (brand spec) */
+  .container-brand {
+    width: 100%;
+    max-width: 1440px;
+    margin-inline: auto;
+    padding-inline: 1.5rem;
+  }
+  @media (min-width: 768px) {
+    .container-brand { padding-inline: 3rem; }
+  }
+  @media (min-width: 1280px) {
+    .container-brand { padding-inline: 5rem; }
+  }
+
+  /* Photo placeholder background — dark gradient with subtle ember glow */
+  .photo-bg {
+    background:
+      radial-gradient(ellipse 70% 50% at 50% 65%, rgba(217, 74, 31, 0.10), transparent 65%),
+      linear-gradient(160deg, #16161a 0%, #0c0c0e 100%);
+  }
+
+  /* Subtle hover tint for list rows */
+  .hover-row:hover {
+    background: rgba(231, 230, 226, 0.012);
+  }
+}

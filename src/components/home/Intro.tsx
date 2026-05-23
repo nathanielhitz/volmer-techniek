@@ -10,10 +10,10 @@ const sidefacts = [
 
 export default function Intro() {
   return (
-    <section className="border-b border-ash/[8%] py-[200px]">
+    <section className="border-b border-ash/[8%] py-14 lg:py-[200px]">
       <div className="container-brand">
         {/* Section meta */}
-        <div className="mb-[120px] grid grid-cols-1 items-start gap-7 lg:grid-cols-[1fr_2fr] lg:gap-[120px]">
+        <div className="mb-10 grid grid-cols-1 items-start gap-7 lg:mb-[120px] lg:grid-cols-[1fr_2fr] lg:gap-[120px]">
           <div className="flex flex-col gap-3.5">
             <span className="font-mono text-[11px] tracking-[0.22em] uppercase text-molten">
               01 — Wie wij zijn
@@ -35,7 +35,7 @@ export default function Intro() {
         </div>
 
         {/* Body — 2 columns */}
-        <div className="grid grid-cols-1 items-start gap-[120px] lg:grid-cols-[5fr_6fr]">
+        <div className="grid grid-cols-1 items-start gap-16 lg:gap-[120px] lg:grid-cols-[5fr_6fr]">
           {/* Left — body copy */}
           <div>
             <p className="text-[20px] leading-[1.65] text-steel-30 first-letter:float-left first-letter:font-display first-letter:font-semibold first-letter:text-[4.6em] first-letter:leading-[0.9] first-letter:text-molten first-letter:pr-4 first-letter:pt-2">

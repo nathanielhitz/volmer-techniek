@@ -3,8 +3,7 @@ import Link from "next/link";
 export default function Hero() {
   return (
     <header
-      className="relative flex min-h-screen flex-col justify-end overflow-hidden isolate px-6 pb-20 pt-[140px] md:px-20"
-      style={{ padding: "140px 5rem 80px" }}
+      className="relative flex min-h-[55svh] flex-col justify-end overflow-hidden isolate pb-10 pt-[72px] md:min-h-screen md:pb-20 md:pt-[140px]"
     >
       {/* ── Background stage — placeholder for real workshop photograph/video ── */}
       <div className="absolute inset-0 -z-[2] overflow-hidden" aria-hidden="true">
@@ -39,7 +38,7 @@ export default function Hero() {
       </div>
 
       {/* ── Hero content ── */}
-      <div className="container-brand relative z-[5] grid grid-cols-1 items-end gap-16 lg:grid-cols-[7fr_4fr]">
+      <div className="container-brand relative z-[5] grid grid-cols-1 items-end gap-6 lg:grid-cols-[7fr_4fr] lg:gap-16">
         {/* Left — display headline */}
         <h1
           className="font-display font-medium text-ash leading-[0.96] tracking-[-0.035em]"
@@ -53,7 +52,7 @@ export default function Hero() {
 
         {/* Right — lede + CTAs */}
         <div className="flex flex-col gap-9 pb-3.5">
-          <p className="text-[17px] leading-[1.6] text-steel-30 max-w-[360px]">
+          <p className="text-[17px] leading-[1.6] text-steel-30 lg:max-w-[360px]">
             Wij ontwerpen, bouwen, repareren en onderhouden voor zware industrie.
             In-house engineering, eigen werkplaats, één aanspreekpunt — van eerste
             schets tot draaiende lijn.
